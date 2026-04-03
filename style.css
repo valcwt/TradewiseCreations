@@ -20,9 +20,27 @@ header {
     margin-bottom: 80px;
 }
 
+/* ÉTAT NORMAL DU LOGO */
 .logo-taureau {
     max-width: 280px;
     height: auto;
+    cursor: pointer;
+    /* Transition fluide pour l'ombre et la taille */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Petite ombre portée discrète par défaut */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.05));
+}
+
+/* EFFET HOVER SYMPA */
+.logo-taureau:hover {
+    /* Le logo monte légèrement */
+    transform: translateY(-8px) scale(1.03);
+    
+    /* On accentue l'ombre pour donner un effet de profondeur (le logo se décolle) */
+    filter: drop-shadow(0 15px 25px rgba(30, 58, 138, 0.15));
+    
+    /* Optionnel : un léger boost de contraste pour le rendre plus vif */
+    contrast: 1.1;
 }
 
 /* SECTION PARTENAIRES */
