@@ -19,7 +19,8 @@ header {
 }
 
 .logo-taureau {
-    max-width: 150px;
+    max-width: 300px;
+    height: auto;
 }
 
 /* SECTION AVANTAGES (Ligne horizontale aérée) */
