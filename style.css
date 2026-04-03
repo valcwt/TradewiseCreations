@@ -12,27 +12,7 @@ body {
     padding: 100px 20px; /* Beaucoup d'espace en haut et en bas */
 }
 
-.product-link {
-    text-decoration: none; /* Enlève le trait bleu sous le texte */
-    color: inherit;
-    display: block;
-}
 
-.click-hint {
-    font-size: 10px;
-    text-align: center;
-    color: #5865F2; /* Bleu Discord officiel */
-    font-weight: 800;
-    padding-bottom: 15px;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.product-card:hover .click-hint {
-    opacity: 1;
-    transform: scale(1.1);
-}
 
 /* STYLE DES MENTIONS LÉGALES */
 .disclosures {
