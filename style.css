@@ -28,7 +28,7 @@ header {
 
 .partner-logo:hover {
     opacity: 1;
-    transform: scale(3.0);
+    transform: scale(2.0);
     transition: 0.3s;
 }
 
