@@ -76,11 +76,12 @@ header {
 }
 
 .trust-title {
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 800;
+    line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    color: #111;
+    margin-bottom: 10px;
+    color: #31518b; /* Ton nouveau bleu acier */
 }
 
 .trust-text {
@@ -132,10 +133,11 @@ header {
 }
 
 .product-name {
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-weight: 800;
     text-transform: uppercase;
-    max-width: 60%;
+    color: #31518b; /* Ton nouveau bleu acier */
+    max-width: 150px;
 }
 
 .product-price {
