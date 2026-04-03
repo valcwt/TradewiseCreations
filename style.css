@@ -1,135 +1,110 @@
-/* RESET DE BASE POUR UN CODE PROPRE */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-    color: #333;
-    line-height: 1.5;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #31518b; /* Bleu spécifique trading de ton image */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 100px 20px; /* Beaucoup d'espace en haut et en bas */
 }
 
-/* HEADER AVEC LOGO CENTRÉ */
+/* LOGO TAUREAU CENTRÉ */
 header {
     text-align: center;
-    padding: 40px 0;
+    margin-bottom: 120px; /* Grand espace sous le logo */
 }
 
-.logo-taureau img {
-    max-height: 80px;
+.logo-taureau {
+    max-width: 150px;
 }
 
-/* SECTION CONFIANCE : ALIGNEMENT */
+/* SECTION AVANTAGES (Ligne horizontale aérée) */
 .trust-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 60px;
-}
-
-.partners-logos img {
-    max-height: 40px;
-}
-
-.partners-logos.end {
-    margin-left: auto;
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.trust-item {
-    padding: 20px;
-}
-
-.trust-icon {
-    max-height: 50px;
-    margin-bottom: 15px;
-}
-
-.trust-title {
-    font-weight: 700;
-    font-size: 1.1em;
-    color: #31518b; /* Bleu foncé de la maquette */
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.trust-text {
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* GRILLE DE PRODUITS : LA CLÉ */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.product-card {
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.product-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.product-info {
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 150px;
+    gap: 20px;
+}
+
+.trust-item {
+    text-align: center;
+    flex: 1;
+}
+
+.trust-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.trust-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.trust-text {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.partner-logo {
+    max-width: 140px;
+    opacity: 0.8;
+}
+
+/* GRILLE DE PRODUITS (3 colonnes) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.product-card {
+    text-align: left;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #eee; /* Ligne fine comme sur ton modèle */
+    padding-top: 15px;
 }
 
 .product-name {
-    font-size: 1em;
-    font-weight: 700;
-    color: #31518b;
-    text-transform: uppercase;
-    line-height: 1.1;
-}
-
-.product-benefit {
     font-size: 0.9em;
-    color: #777;
+    font-weight: 800;
+    text-transform: uppercase;
+    max-width: 150px;
 }
 
-/* RESPONSIVE : ADAPTATION POUR MOBILES */
-@media (max-width: 900px) {
-    .trust-grid, .product-grid {
+.product-price {
+    font-size: 0.85em;
+    color: #777;
+    font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .trust-section, .product-grid {
         grid-template-columns: 1fr;
-    }
-
-    .trust-section {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .partners-logos.end {
-        margin-left: 0;
-        margin-top: 20px;
+        gap: 60px;
     }
 }
