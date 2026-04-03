@@ -13,7 +13,52 @@ body {
 }
 
 
+/* STYLE DES MENTIONS LÉGALES */
+.disclosures {
+    margin-top: 100px;
+    padding: 0 40px;
+    text-align: center; /* Centré comme sur l'image */
+}
 
+.disclosures p {
+    font-size: 11px; /* Texte petit pour le côté légal */
+    line-height: 1.6;
+    color: #666; /* Gris discret */
+    margin-bottom: 25px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disclosures strong {
+    color: #333;
+    font-weight: 700;
+}
+
+/* STYLE DU FOOTER */
+.site-footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #eee; /* Ligne fine de séparation */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-start; /* Aligné à gauche comme Shopify */
+    gap: 30px;
+    font-size: 12px;
+    color: #999;
+}
+
+.footer-bottom a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #333;
+}
 
 /* LOGO TAUREAU CENTRÉ */
 header {
