@@ -12,6 +12,12 @@ body {
     padding: 100px 20px; /* Beaucoup d'espace en haut et en bas */
 }
 
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
 /* LOGO TAUREAU CENTRÉ */
 header {
     text-align: center;
@@ -22,6 +28,8 @@ header {
     max-width: 300px;
     height: auto;
 }
+ 
+
 
 /* SECTION AVANTAGES (Ligne horizontale aérée) */
 .trust-section {
