@@ -13,40 +13,7 @@ body {
 }
 
 
-/* 1. ÉTAT NORMAL (Par défaut) */
-.partner-logo {
-    max-width: 130px; /* Ajuste la taille si besoin */
-    height: auto;
-    
-    /* PARTIE MARQUANTE : On baisse l'opacité par défaut 
-       pour créer un gros contraste au survol */
-    opacity: 0.5; /* L'image est grisée/estompée */
-    
-    /* C'est ICI qu'on met la transition pour qu'elle soit fluide 
-       à l'aller ET au retour */
-    transition: all 0.4s ease-in-out; /* Légèrement plus lent pour le style premium */
-    
-    /* Optionnel : un léger flou par défaut pour accentuer l'effet */
-    filter: grayscale(100%); /* L'image est en noir et blanc */
-}
 
-/* 2. ÉTAT AU SURVOL (Hover) */
-.partner-logo:hover {
-    /* L'IMAGE S'ILLUMINE TOTALEMENT */
-    opacity: 1; /* Pleine couleur/luminosité */
-    
-    /* L'IMAGE GRANDIT NETTEMENT */
-    transform: scale(1.15); /* 15% plus grand (au lieu de 5%) */
-    
-    /* On enlève le flou/gris */
-    filter: grayscale(0%); /* La couleur revient */
-    
-    /* Optionnel : une ombre portée pour le relief */
-    drop-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    
-    /* Curseur en main pour confirmer que c'est cliquable */
-    cursor: pointer;
-}  
 
 /* LOGO TAUREAU CENTRÉ */
 header {
@@ -58,7 +25,12 @@ header {
     max-width: 300px;
     height: auto;
 }
- 
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(3.0);
+    transition: 0.3s;
+}
 
 
 /* SECTION AVANTAGES (Ligne horizontale aérée) */
