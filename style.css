@@ -1,91 +1,48 @@
+/* RESET ET BASES */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', Arial, sans-serif;
     background-color: #ffffff;
-    color: #31518b; /* Bleu spécifique trading de ton image */
+    color: #1e3a8a; /* Bleu plus pro */
+    line-height: 1.6;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 100px 20px; /* Beaucoup d'espace en haut et en bas */
+    padding: 60px 20px;
 }
 
-
-
-/* STYLE DES MENTIONS LÉGALES */
-.disclosures {
-    margin-top: 100px;
-    padding: 0 40px;
-    text-align: center; /* Centré comme sur l'image */
-}
-
-.disclosures p {
-    font-size: 11px; /* Texte petit pour le côté légal */
-    line-height: 1.6;
-    color: #666; /* Gris discret */
-    margin-bottom: 25px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.disclosures strong {
-    color: #333;
-    font-weight: 700;
-}
-
-/* STYLE DU FOOTER */
-.site-footer {
-    margin-top: 60px;
-    padding: 20px 0;
-    border-top: 1px solid #eee; /* Ligne fine de séparation */
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: flex-start; /* Aligné à gauche comme Shopify */
-    gap: 30px;
-    font-size: 12px;
-    color: #999;
-}
-
-.footer-bottom a {
-    color: #999;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-bottom a:hover {
-    color: #333;
-}
-
-/* LOGO TAUREAU CENTRÉ */
+/* HEADER */
 header {
     text-align: center;
-    margin-bottom: 120px; /* Grand espace sous le logo */
+    margin-bottom: 80px;
 }
 
 .logo-taureau {
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
 }
 
-.partner-logo:hover {
-    opacity: 1;
-    transform: scale(2.0);
-    transition: 0.3s;
-}
-
-
-/* SECTION AVANTAGES (Ligne horizontale aérée) */
+/* SECTION PARTENAIRES */
 .trust-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     gap: 20px;
+}
+
+.partner-logo {
+    max-width: 130px;
+    opacity: 0.6;
+    transition: 0.4s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .trust-item {
@@ -94,74 +51,134 @@ header {
 }
 
 .trust-icon {
-    width: 40px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 35px;
+    margin-bottom: 15px;
 }
 
 .trust-title {
-    font-size: 1.1em;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 0.9em;
+    font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    color: #111;
 }
 
 .trust-text {
-    font-size: 0.85em;
+    font-size: 0.75em;
     color: #666;
-    line-height: 1.4;
 }
 
-.partner-logo {
-    max-width: 140px;
-    opacity: 0.8;
-}
-
-/* GRILLE DE PRODUITS (3 colonnes) */
+/* GRILLE DE PRODUITS (LA CORRECTION EST ICI) */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes fixes */
     gap: 40px;
+    row-gap: 80px;
+    margin-bottom: 100px;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .product-card {
-    text-align: left;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    padding-bottom: 10px;
+}
+
+.product-card:hover {
+    border-color: #5865F2; /* Bleu Discord */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .product-image {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin-bottom: 25px;
+    border-radius: 8px 8px 0 0;
 }
 
 .product-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-top: 1px solid #eee; /* Ligne fine comme sur ton modèle */
-    padding-top: 15px;
+    padding: 15px;
+    border-top: 1px solid #f9f9f9;
 }
 
 .product-name {
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: 800;
     text-transform: uppercase;
-    max-width: 150px;
+    max-width: 60%;
 }
 
 .product-price {
-    font-size: 0.85em;
-    color: #777;
-    font-weight: 400;
+    font-size: 0.9em;
+    color: #444;
+    font-weight: 700;
+}
+
+/* BADGE DISCORD DANS LA CARTE */
+.discord-badge {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.discord-icon {
+    width: 25px;
+    filter: grayscale(100%) opacity(0.3);
+    transition: 0.3s;
+}
+
+.product-card:hover .discord-icon {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.2);
+}
+
+/* MENTIONS LÉGALES & FOOTER */
+.disclosures {
+    margin-top: 80px;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 60px;
+}
+
+.disclosures p {
+    font-size: 11px;
+    color: #888;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.site-footer {
+    padding: 40px 0;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.footer-bottom a {
+    color: #bbb;
+    text-decoration: none;
 }
 
 /* RESPONSIVE */
-@media (max-width: 800px) {
-    .trust-section, .product-grid {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-        gap: 60px;
-    }
+@media (max-width: 900px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .trust-section { flex-direction: column; gap: 40px; }
+}
+
+@media (max-width: 600px) {
+    .product-grid { grid-template-columns: 1fr; }
 }
