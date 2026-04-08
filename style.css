@@ -53,58 +53,49 @@ header {
     margin-bottom: 50px; /* Espace avant les logos */
 }
 
+/* --- LIGNE DES PARTENAIRES UNIFIÉE --- */
 .partners-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px; /* Espace généreux pour un look aéré */
-    margin-top: 40px;
+    gap: 120px; /* Plus d'espace entre les logos */
+    margin-top: 100px;
     margin-bottom: 80px;
 }
 
+/* --- STYLE PAR DÉFAUT DES LOGOS (NT8 & KINETICK) --- */
 .partner-logo {
-    max-width: 140px; /* Taille standard pour NT8 et Kinetick */
+    max-width: 140px; /* Taille standard pour NinjaTrader/Kinetick */
     height: auto;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    filter: grayscale(100%); /* Optionnel : pour garder le look sobre par défaut */
-}
-
-/* AJUSTEMENT SPÉCIFIQUE POUR LE LOGO YOUTUBE */
-.youtube-fix {
-    max-width: 100px; /* On l'agrandit par rapport aux 35px d'avant */
-    filter: none; /* On peut laisser YouTube en couleur ou en gris selon ton goût */
+    opacity: 0.8; /* Légère transparence pour la sobriété */
+    transition: all 0.4s ease;
 }
 
 .partner-logo:hover {
-    opacity: 1;
-    transform: scale(1.1);
-    filter: grayscale(0%); /* La couleur revient au survol */
+    opacity: 1; /* Pleine couleur au survol */
+    transform: scale(1.1); /* Petit effet de pop */
 }
-/* Style spécifique pour le lien Youtube au milieu */
-.youtube-link-minimal {
+
+/* --- STYLE SPÉCIAL POUR YOUTUBE (LE BOOST) --- */
+.youtube-item {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    gap: 8px;
-    transition: 0.3s;
 }
 
-.youtube-small-icon {
-    width: 60px; /* Petit logo pour rester discret */
+.youtube-icon {
+    /* ÉGALISE LA TAILLE : YouTube est maintenant aussi visible que Kinetick */
+    width: 140px; 
     height: auto;
+    border-radius: 8px; /* Petit arrondi pour le look pro */
+    filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.2)); /* LÉGÈRE LUEUR ROUGE PAR DÉFAUT */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.youtube-link-minimal span {
-    font-size: 10px;
-    font-weight: 800;
-    color: #31518b;
-    letter-spacing: 1px;
-}
-
-.youtube-link-minimal:hover {
-    transform: translateY(-3px);
+/* --- EFFET HOVER (SURVOL) POUR YOUTUBE --- */
+.youtube-item:hover .youtube-icon {
+    filter: drop-shadow(0 15px 25px rgba(255, 0, 0, 0.3)); /* LA LUEUR S'ALLUME VRAIMENT */
+    transform: scale(1.2) translateY(-10px); /* Le logo monte et grossit plus que les autres */
 }
 .trust-item {
     text-align: center;
