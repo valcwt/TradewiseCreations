@@ -204,3 +204,39 @@ header {
 @media (max-width: 600px) {
     .product-grid { grid-template-columns: 1fr; }
 }
+/* --- STYLE SPÉCIAL POUR LE LIEN YOUTUBE --- */
+
+/* On supprime le soulignement bleu des liens */
+.twc-youtube-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transition "Bouncy" pro */
+}
+
+/* L'icône par défaut (en Gris et fine) */
+.twc-youtube-link .trust-icon {
+    width: 35px; /* Taille assortie aux autres */
+    height: auto;
+    margin-bottom: 15px;
+    filter: grayscale(100%) opacity(0.5); /*gris et discret */
+    transition: all 0.4s ease;
+}
+
+/* --- EFFET HOVER (SURVOL) --- */
+
+.twc-youtube-link:hover {
+    transform: translateY(-8px); /* La carte entière monte */
+}
+
+/* L'icône retrouve sa couleur et son éclat */
+.twc-youtube-link:hover .trust-icon {
+    filter: grayscale(0%) opacity(1) drop-shadow(0 10px 15px rgba(255, 0, 0, 0.2)); /* Rouge éclatant + ombre portée rouge */
+    transform: scale(1.2); /* Agrandissement net (20%) */
+}
+
+/* Le titre change vers le bleu de tes robots pour la cohérence */
+.twc-youtube-link:hover .trust-title {
+    color: #1a3c75; /* Ton bleu de titres */
+    transform: scale(1.05); /* Titre grossit très légèrement */
+}
