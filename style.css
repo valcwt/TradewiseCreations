@@ -45,26 +45,60 @@ header {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
 }
 
-/* SECTION PARTENAIRES */
+/* Alignement des textes d'avantages */
 .trust-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px; /* Espace avant les logos */
+}
+
+/* LA LIGNE DES LOGOS (Ninja, YT, Kinetick) */
+.partners-row {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 120px;
-    gap: 20px;
+    gap: 60px; /* Espace entre les logos */
+    margin-bottom: 80px; /* Espace avant la grille de produits */
 }
 
 .partner-logo {
-    max-width: 130px;
-    opacity: 0.6;
-    transition: 0.4s ease;
+    max-width: 140px;
+    height: auto;
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
 .partner-logo:hover {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+/* Style spécifique pour le lien Youtube au milieu */
+.youtube-link-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.youtube-small-icon {
+    width: 35px; /* Petit logo pour rester discret */
+    height: auto;
+}
+
+.youtube-link-minimal span {
+    font-size: 10px;
+    font-weight: 800;
+    color: #31518b;
+    letter-spacing: 1px;
+}
+
+.youtube-link-minimal:hover {
+    transform: translateY(-3px);
+}
 .trust-item {
     text-align: center;
     flex: 1;
@@ -203,40 +237,4 @@ header {
 
 @media (max-width: 600px) {
     .product-grid { grid-template-columns: 1fr; }
-}
-/* --- STYLE SPÉCIAL POUR LE LIEN YOUTUBE --- */
-
-/* On supprime le soulignement bleu des liens */
-.twc-youtube-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transition "Bouncy" pro */
-}
-
-/* L'icône par défaut (en Gris et fine) */
-.twc-youtube-link .trust-icon {
-    width: 35px; /* Taille assortie aux autres */
-    height: auto;
-    margin-bottom: 15px;
-    filter: grayscale(100%) opacity(0.5); /*gris et discret */
-    transition: all 0.4s ease;
-}
-
-/* --- EFFET HOVER (SURVOL) --- */
-
-.twc-youtube-link:hover {
-    transform: translateY(-8px); /* La carte entière monte */
-}
-
-/* L'icône retrouve sa couleur et son éclat */
-.twc-youtube-link:hover .trust-icon {
-    filter: grayscale(0%) opacity(1) drop-shadow(0 10px 15px rgba(255, 0, 0, 0.2)); /* Rouge éclatant + ombre portée rouge */
-    transform: scale(1.2); /* Agrandissement net (20%) */
-}
-
-/* Le titre change vers le bleu de tes robots pour la cohérence */
-.twc-youtube-link:hover .trust-title {
-    color: #1a3c75; /* Ton bleu de titres */
-    transform: scale(1.05); /* Titre grossit très légèrement */
 }
