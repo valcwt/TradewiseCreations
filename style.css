@@ -224,99 +224,95 @@ header {
     .footer-bottom { justify-content: center; text-align: center; }
 }
 
-/* BOX D'ACCÈS DIRECT DISCORD AVEC VIDÉO DE FOND */
 .direct-access-box {
-    position: relative; /* Indispensable pour placer la vidéo en absolu */
-    background: #1e3a8a; /* Ton bleu profond */
+    background: #1e3a8a;
     color: white;
     border-radius: 15px;
-    padding: 50px 30px;
+    padding: 40px 20px;
     margin: 60px auto;
-    max-width: 900px;
-    text-align: center;
-    overflow: hidden; /* Empêche la vidéo de déborder des coins arrondis */
+    max-width: 900px; /* On réduit un peu la largeur pour que ce soit moins massif */
+    text-align: center; /* On centre tout le texte */
     border-bottom: 5px solid #5865F2;
-    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
-}
-
-/* LE STYLAGE DE LA VIDÉO MP4 EN WATERMARK */
-.discord-watermark-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centre la vidéo parfaitement */
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Place la vidéo derrière tout le contenu */
-    opacity: 0.1; /* Semi-transparence pour l'effet Watermark */
-    object-fit: cover; /* La vidéo couvre toute la box sans se déformer */
-}
-
-/* ON S'ASSURE QUE LE CONTENU EST BIEN VISIBLE AU DESSUS */
-.access-content {
-    position: relative;
-    z-index: 2;
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.15);
 }
 
 .access-header {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centre le titre */
     align-items: center;
     gap: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+/* Le petit point vert "Online" pour remplacer le carré blanc */
+.discord-status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #3ba55c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #3ba55c;
 }
 
 .access-header h2 {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 800;
     letter-spacing: 1px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Légère ombre pour plus de lisibilité */
 }
 
 .access-description {
-    font-size: 1.1em;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     color: rgba(255, 255, 255, 0.95);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Stylage des étapes */
+/* On retire les fonds blancs agressifs sur le texte */
+.access-description strong {
+    color: #5865F2;
+    background: none; 
+    text-decoration: underline;
+}
+
 .action-steps {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centre les 3 blocs */
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .step {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
     border-radius: 10px;
     flex: 1;
     min-width: 200px;
     display: flex;
+    flex-direction: column; /* Chiffre au dessus du texte */
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-weight: bold;
-    font-size: 0.9em;
+    gap: 10px;
 }
 
 .step-number {
     background: #5865F2;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-weight: bold;
-    font-size: 0.85em;
+    font-size: 0.9em;
+}
+
+.step p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Ajustement de la taille des logos de confiance s'ils sont trop gros */
+.trust-title {
+    font-size: 1em; /* Un peu plus petit pour l'équilibre */
 }
