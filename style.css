@@ -1,11 +1,16 @@
 /* RESET ET BASES */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', Arial, sans-serif;
     background-color: #ffffff;
-    color: #1e3a8a; /* Bleu plus pro */
+    color: #1e3a8a;
     line-height: 1.6;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 .container {
@@ -20,86 +25,34 @@ header {
     margin-bottom: 80px;
 }
 
-/* ÉTAT NORMAL DU LOGO */
 .logo-taureau {
     max-width: 280px;
+    width: 100%;
     height: auto;
     cursor: pointer;
-    
-    /* On baisse un peu l'opacité par défaut pour créer l'effet (comme tes partenaires) */
     opacity: 0.85; 
-    
-    /* Transition douce identique aux autres logos */
     transition: all 0.4s ease-in-out;
 }
 
-/* ÉTAT HOVER (SURVOL) */
 .logo-taureau:hover {
-    /* Le logo devient totalement net */
     opacity: 1;
-    
-    /* Un agrandissement très léger (5%) pour le dynamisme */
     transform: scale(1.05);
-    
-    /* Optionnel : une ombre très fine pour le décoller du fond blanc */
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
 }
 
-/* Alignement des textes d'avantages */
+/* SECTION CONFIANCE */
 .trust-section {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-bottom: 50px; /* Espace avant les logos */
+    flex-wrap: wrap;
+    gap: 40px 80px;
+    margin-bottom: 50px;
 }
 
-/* --- LIGNE DES PARTENAIRES UNIFIÉE --- */
-.partners-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 120px; /* Plus d'espace entre les logos */
-    margin-top: 100px;
-    margin-bottom: 80px;
-}
-
-/* --- STYLE PAR DÉFAUT DES LOGOS (NT8 & KINETICK) --- */
-.partner-logo {
-    max-width: 140px; /* Taille standard pour NinjaTrader/Kinetick */
-    height: auto;
-    opacity: 0.8; /* Légère transparence pour la sobriété */
-    transition: all 0.4s ease;
-}
-
-.partner-logo:hover {
-    opacity: 1; /* Pleine couleur au survol */
-    transform: scale(1.1); /* Petit effet de pop */
-}
-
-/* --- STYLE SPÉCIAL POUR YOUTUBE (LE BOOST) --- */
-.youtube-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.youtube-icon {
-    /* ÉGALISE LA TAILLE : YouTube est maintenant aussi visible que Kinetick */
-    width: 600px; 
-    height: auto;
-    border-radius: 8px; /* Petit arrondi pour le look pro */
-    filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.2)); /* LÉGÈRE LUEUR ROUGE PAR DÉFAUT */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* --- EFFET HOVER (SURVOL) POUR YOUTUBE --- */
-.youtube-item:hover .youtube-icon {
-    filter: drop-shadow(0 15px 25px rgba(255, 0, 0, 0.3)); /* LA LUEUR S'ALLUME VRAIMENT */
-    transform: scale(1.2) translateY(-10px); /* Le logo monte et grossit plus que les autres */
-}
 .trust-item {
     text-align: center;
     flex: 1;
+    min-width: 200px;
 }
 
 .trust-icon {
@@ -113,7 +66,7 @@ header {
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #31518b; /* Ton nouveau bleu acier */
+    color: #31518b;
 }
 
 .trust-text {
@@ -121,12 +74,48 @@ header {
     color: #666;
 }
 
-/* GRILLE DE PRODUITS (LA CORRECTION EST ICI) */
+/* LIGNE DES PARTENAIRES */
+.partners-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux logos de s'empiler */
+    gap: 40px 80px;
+    margin: 80px 0;
+}
+
+.partner-logo {
+    max-width: 140px;
+    height: auto;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* YOUTUBE */
+.youtube-icon {
+    width: 100%;
+    max-width: 150px; /* Taille corrigée pour l'harmonie */
+    height: auto;
+    border-radius: 8px;
+    filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.2));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.youtube-item:hover .youtube-icon {
+    filter: drop-shadow(0 15px 25px rgba(255, 0, 0, 0.3));
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* GRILLE DE PRODUITS */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes fixes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive auto */
     gap: 40px;
-    row-gap: 80px;
     margin-bottom: 100px;
 }
 
@@ -141,10 +130,11 @@ header {
     border-radius: 8px;
     transition: 0.3s ease;
     padding-bottom: 10px;
+    height: 100%;
 }
 
 .product-card:hover {
-    border-color: #5865F2; /* Bleu Discord */
+    border-color: #5865F2;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
@@ -161,15 +151,14 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 15px;
-    border-top: 1px solid #f9f9f9;
 }
 
 .product-name {
     font-size: 0.9em;
     font-weight: 800;
     text-transform: uppercase;
-    color: #31518b; /* Ton nouveau bleu acier */
-    max-width: 150px;
+    color: #31518b;
+    max-width: 65%;
 }
 
 .product-price {
@@ -178,7 +167,6 @@ header {
     font-weight: 700;
 }
 
-/* BADGE DISCORD DANS LA CARTE */
 .discord-badge {
     text-align: center;
     padding-bottom: 15px;
@@ -192,10 +180,9 @@ header {
 
 .product-card:hover .discord-icon {
     filter: grayscale(0%) opacity(1);
-    transform: scale(1.2);
 }
 
-/* MENTIONS LÉGALES & FOOTER */
+/* FOOTER & DISCLOSURES */
 .disclosures {
     margin-top: 80px;
     text-align: center;
@@ -218,8 +205,9 @@ header {
 
 .footer-bottom {
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-bottom a {
@@ -227,12 +215,11 @@ header {
     text-decoration: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .product-grid { grid-template-columns: repeat(2, 1fr); }
-    .trust-section { flex-direction: column; gap: 40px; }
-}
-
-@media (max-width: 600px) {
-    .product-grid { grid-template-columns: 1fr; }
+/* MEDIA QUERIES (SÉCURITÉ MOBILE) */
+@media (max-width: 768px) {
+    .container { padding: 30px 15px; }
+    header { margin-bottom: 40px; }
+    .logo-taureau { max-width: 200px; }
+    .partners-row { gap: 40px; }
+    .footer-bottom { justify-content: center; text-align: center; }
 }
