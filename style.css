@@ -223,3 +223,100 @@ header {
     .partners-row { gap: 40px; }
     .footer-bottom { justify-content: center; text-align: center; }
 }
+
+/* BOX D'ACCÈS DIRECT DISCORD */
+.direct-access-box {
+    background: #1e3a8a; /* Ton bleu pro */
+    color: white;
+    border-radius: 12px;
+    padding: 35px;
+    margin: 60px 0;
+    text-align: left;
+    border-left: 8px solid #5865F2; /* Rappel couleur Discord */
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.15);
+}
+
+.access-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.discord-white-icon {
+    width: 45px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Force l'icône en blanc */
+}
+
+.access-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.direct-access-box p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    max-width: 800px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.direct-access-box p strong {
+    color: #5865F2; /* Met en avant les mots clés en couleur Discord */
+    background: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* LES ÉTAPES 1-2-3 */
+.action-steps {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step span {
+    background: #5865F2;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8em;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+    .direct-access-box {
+        padding: 25px 20px;
+        text-align: center;
+    }
+    .access-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .action-steps {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .step {
+        justify-content: center;
+    }
+}
