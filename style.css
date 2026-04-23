@@ -226,44 +226,27 @@ header {
 
 /* MESSAGE DISCORD  */
 
-/* Style spécifique pour le lien cliquable */
 .step-link {
     text-decoration: none;
-    background: rgba(88, 101, 242, 0.2) !important; /* Couleur Discord légère */
-    border: 2px solid #5865F2 !important; /* Bordure Discord plus marquée */
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    animation: pulse-border 2s infinite; /* Animation de pulsation constante */
+    background: rgba(88, 101, 242, 0.2) !important;
+    border: 2px solid #5865F2 !important;
+    animation: pulse-border 2s infinite;
 }
 
-.step-link:hover {
-    background: rgba(88, 101, 242, 0.4) !important;
-    transform: translateY(-5px);
-}
-
-/* Petit texte "Click here" sous le bouton */
 .click-indicator {
-    font-size: 0.7em;
+    font-size: 0.75em;
     text-transform: uppercase;
-    color: #5865F2;
-    margin-top: 5px;
+    color: #ffffff; /* Changé en blanc pour la lisibilité */
+    margin-top: 8px;
     font-weight: 800;
+    letter-spacing: 1px;
 }
 
-/* Animation de pulsation pour attirer l'oeil sans toucher la souris */
 @keyframes pulse-border {
-    0% {
-        box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(88, 101, 242, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(88, 101, 242, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(88, 101, 242, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
 }
-
 
 /* Mobile */
 @media (max-width: 600px) {
